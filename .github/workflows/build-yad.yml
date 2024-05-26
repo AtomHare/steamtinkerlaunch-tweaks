@@ -17,7 +17,7 @@ jobs:
     - name: Install required packages
       run: |
           sudo apt-get update
-          sudo apt-get install autoconf automake intltool libgtk-3-dev libglib2.0-dev libwebkit2gtk-4.0-dev
+          sudo apt-get install autoconf automake intltool libgtk-3-dev libglib2.0-dev libwebkit2gtk-4.0-dev libgtksourceview-3.0-dev
 
     - name: Retrieve Yad source code
       run: |
@@ -88,4 +88,4 @@ jobs:
           Yad-${{ steps.yad_version.outputs.version }}-x86_64.AppImage
           Yad-${{ steps.yad_version.outputs.version }}-x86_64.AppImage.sha512sum
         body: "[`yad`](https://github.com/v1cont/yad) ${{ steps.yad_version.outputs.version }} appimage built on ubuntu with github actions"
-        tag_name: Yad-${{ steps.yad_version.outputs.version }}
+        tag_name: Yad-THEME-TEST
